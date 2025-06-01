@@ -1,0 +1,640 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    overflow: scroll
+  }
+  
+  header {
+    background: linear-gradient(90deg, #00b4db, #0083b0);
+    color: white;
+    text-align: center;
+    padding: 1rem 1rem;
+    /* position: sticky; */
+    top: 0;
+    z-index: 1000;
+    background-color: #00a8b5;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+  
+  section {
+    /* padding: 3rem 1rem; */
+    padding : 1rem;
+    text-align: center;
+  }
+  
+  section h2 {
+    font-size: 1.8rem;
+    color: #00778a;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+  }
+  
+  /* Glider.js Styles */
+  
+  .glider-contain {
+    position: relative;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 1rem;
+  }
+  
+  .glider {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .glider img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  }
+  
+  .glider-prev,
+  .glider-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00b4db;
+    color: white;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 14px;
+    cursor: pointer;
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  
+  .glider-prev:hover,
+  .glider-next:hover {
+    background-color: #0083b0;
+  }
+  
+  .glider-prev {
+    left: -20px;
+  }
+  
+  .glider-next {
+    right: -20px;
+  }
+  
+  .dots {
+    text-align: center;
+    padding-top: 15px;
+  }
+  
+  .dots button {
+    background-color: #ccc;
+    border: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 0;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .dots .glider-dot.active {
+    background-color: #00778a;
+  }
+  
+  /* Responsive tweaks */
+  
+  @media (max-width: 768px) {
+    .glider img {
+      height: 160px;
+    }
+  
+    header h1 {
+      font-size: 2rem;
+    }
+  
+    header p {
+      font-size: 1rem;
+    }
+  
+    section h2 {
+      font-size: 1.5rem;
+    }
+  
+    .glider-prev, .glider-next {
+      padding: 8px 10px;
+      font-size: 1.2rem;
+    }
+  }
+  
+  /* header {
+    background: linear-gradient(to right, #00bcd4, #0097a7);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    /* position: relative; */
+   */
+  
+  header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: 1px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  header p {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+    color: #e0f7fa;
+  }
+
+  .contact-section {
+    background-color: #f0f4f5;
+    padding: 3rem 1rem;
+    text-align: center;
+    color: #004d40;
+  }
+  
+  .contact-section h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: #00796b;
+  }
+  
+  .contact-section p {
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .contact-section a {
+    color: #004d40;
+    text-decoration: underline;
+  }
+  
+  .contact-section a:hover {
+    color: #00796b;
+  }
+  
+  .footer {
+    padding: 3rem 1rem;
+    text-align: center;
+    background-color: #f2f2f2;
+    text-align: center;
+    padding: 40px 20px;
+    color: #333;
+    border-top: 2px solid #00796b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .footer h2 {
+    color: #00796b;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .footer p {
+    margin: 8px 0;
+    font-size: 16px;
+  }
+  
+  .footer a {
+    color: #00796b;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  .contact-btn {
+    background-color: white;
+    color: #00796b;
+    border: 2px solid #00796b;
+    /* margin-top: 10px; */
+    padding: 10px 20px;
+    border-radius: 50px; /* Rounded pill shape */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    transition: all 0.3s ease;
+  }
+  
+  .contact-btn:hover {
+    background-color: #00796b;
+    color: white;
+  }
+  
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  .contact-div{
+    margin-top: 10px;
+  }
+  
+  .social-icons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .social-icons i {
+    font-size: 30px;
+    color: #25d366; /* WhatsApp green or customize */
+    margin: 0 15px;
+    transition: transform 0.2s ease;
+  }
+  
+  .social-icons i:hover {
+    transform: scale(1.1);
+    color: #000; /* or brand-specific hover color */
+  }
+  
+  /* Make header flex container */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+  flex-wrap: wrap;
+  text-align: left; /* Remove default center alignment */
+}
+
+.header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(248, 235, 235, 0.1);
+}
+
+.contact-div {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  align-items: center;
+  margin-top: 0;
+}
+
+.header-btn {
+  background-color: white;
+  color: #00796b;
+  border: 2px solid #00796b;
+  padding: 10px 16px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.contact-btn:hover,
+.header-btn:hover {
+  background-color: #00796b;
+  color: white;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+  .contact-div {
+    justify-content: center;
+    margin-top: 1rem;
+  }
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.8);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  color: white;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.glider img 
+{
+  max-width: 100%;
+  border-radius: 8px;
+  margin-right: 10px;
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+}
+
+.glider {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  background-color: white;
+  color: #00796b;
+  border: 2px solid #00796b;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.dropdown-toggle:hover {
+  background-color: #00796b;
+  color: white;
+}
+
+/* .dropdown-menu {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 10px 0;
+} */
+
+.dropdown-item {
+  display: block;
+  padding: 10px 20px;
+  color: #00796b;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+  transition: background-color 0.3s;
+}
+
+.dropdown-item:hover {
+  background-color: #f0f0f0;
+  color: #004d40;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 0;
+  top: 100%;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  padding: 10px 0;
+  display: none;
+  z-index: 1000;
+  /* min-width: 200px; */
+}
+
+.dropdown.show .dropdown-menu {
+  display: block;
+}
+
+
+.logo-title {
+  display: flex;
+  align-items: center;
+  /* gap: 10px; */
+}
+
+.logo-img {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+
+/* Base header style (optional) */
+.header {
+  padding: 20px; /* You can reduce this */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+/* Mobile view adjustments */
+@media (max-width: 600px) {
+  .header {
+    padding: 10px; /* Reduce padding */
+  }
+
+  .logo-img {
+    height: 50px; /* Smaller logo */
+  }
+
+  .logo-title h1 {
+    font-size: 18px; /* Smaller font size */
+  }
+
+  .dropdown-toggle,
+  .header-btn {
+    font-size: 14px; /* Optional: smaller buttons */
+    padding: 6px 10px; /* Tighter button spacing */
+  }
+}
+
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+     /* Optional spacing between elements */
+  }
+
+  .contact-div {
+    justify-content: center;
+  }
+
+  .logo-title {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-text {
+    margin-left: 0px;
+  }
+}
+
+.why-choose {
+  background-color: #59a189; /* similar to your screenshot */
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.why{
+  color: #fff;
+}
+
+.why-choose h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  font-weight: 700;
+}
+
+.stats-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;
+}
+
+.stat-box {
+  flex: 1 1 150px;
+  min-width: 120px;
+}
+
+.stat-box h3 {
+  font-size: 32px;
+  margin: 0;
+  font-weight: 800;
+}
+
+.stat-box p {
+  margin-top: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #f0f0f0;
+}
+
+
+.how-it-works {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #f0f4f5;
+}
+
+.how-it-works h2 {
+  font-size: 28px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.steps-container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.step {
+  max-width: 150px;
+  text-align: center;
+}
+
+.step img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 15px;
+}
+
+.step p {
+  font-weight: 600;
+  color: #222;
+}
+
+.cta-buttons {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.call-btn,
+.check-btn {
+  background-color: #e94e4e;
+  color: white;
+  padding: 12px 22px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.call-btn:hover,
+.check-btn:hover {
+  background-color: #c0392b;
+}
+
+.logo-title {
+  display: flex;
+  align-items: center;
+}
+
+.title-text {
+  margin-left: 10px;
+}
+
+.title-text h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.tagline {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #fff;
+  font-style: italic;
+}
+
